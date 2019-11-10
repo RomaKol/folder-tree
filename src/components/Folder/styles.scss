@@ -1,0 +1,28 @@
+.folder-item {
+  position: relative;
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__img {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 32px;
+    width: 32px;
+    height: auto;
+    margin-right: 5px;
+  }
+  &__title {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100% - 37px);
+    width: calc(100% - 37px);
+  }
+  &__list {
+    padding-left: 5px;
+    position: relative;
+  }
+}
