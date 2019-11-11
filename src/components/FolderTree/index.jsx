@@ -16,7 +16,7 @@ class FolderTree extends Component {
     return (
       <div className="folder-tree">
         <FoldersList
-          folders={foldersList}
+          foldersList={foldersList}
           parentId="0" />
       </div>
     )
@@ -27,7 +27,7 @@ const mapStateToProps = state => ({
   folders: state.folders.folders,
 });
 
-const mapDispatchToProps = dispath => (null);
+const mapDispatchToProps = dispath => ({});
 
 export default connect(
   mapStateToProps,

@@ -1,16 +1,16 @@
-import * as actions from '../constants';
+import * as actionTypes from '../constants';
 
 const initialState = {
   folders: [],
 };
 
-export default (state = initialState, actions) => {
-  const { type, payload } = actions;
+export default (state = initialState, action) => {
+  const { type, payload } = action;
   switch (type) {
-    case actions.ADD_FOLDER:
+    case actionTypes.ADD_FOLDER_SUCCESS:
       return { ...state, folders: [...state.folders, payload.folder] };
 
-    case actions.REMOVE_FOLDER:
+    case actionTypes.REMOVE_FOLDER_SUCCESS:
       const newFolders = state.folders.filter(item => item.id !== payload.folder.id);
       return { ...state, folders: newFolders };
 

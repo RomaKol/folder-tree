@@ -1,8 +1,8 @@
 import { all } from 'redux-saga/effects';
-// import * as auth from './modules/auth/sagas';
+import * as saga from './actions/sagas';
 
 export default function* rootSaga() {
   yield all([
-    
+    saga.addFolder(),
   ]);
 }
